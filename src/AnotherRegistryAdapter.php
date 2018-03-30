@@ -11,10 +11,10 @@
 namespace Structural\Adapter;
 
 /**
- * Class AdapterAnotherRegistry
+ * Class AnotherRegistryAdapter
  * @package Structural\Adapter
  */
-class AdapterAnotherRegistry extends AnotherRegistry implements RegistryInterface
+class AnotherRegistryAdapter extends AnotherRegistry implements RegistryInterface
 {
 
     /**
@@ -28,7 +28,7 @@ class AdapterAnotherRegistry extends AnotherRegistry implements RegistryInterfac
     protected $anotherRegistry;
 
     /**
-     * AdapterAnotherRegistry constructor.
+     * AnotherRegistryAdapter constructor.
      * @param RegistryInterface $registry
      */
     public function __construct(RegistryInterface $registry)
