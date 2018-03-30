@@ -21,13 +21,14 @@ class AnotherRegistry implements AnotherRegistryInterface
     /**
      * @var
      */
-    public $key;
+    protected $key;
     /**
      * @var
      */
-    public $slug;
+    protected $slug;
 
     /**
+     * @codeCoverageIgnore
      * AnotherRegistry constructor.
      * @param $key
      * @param $slug
