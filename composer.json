@@ -1,5 +1,5 @@
 {
-    "name"        : "php-design-patterns/singletons_pool",
+    "name"        : "php-design-patterns/adapter",
     "description" : "PhpDesignPatterns",
     "type"        : "library",
     "keywords"    : [
