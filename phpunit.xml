@@ -7,7 +7,7 @@
          bootstrap="src/tests/bootstrap.php"
 >
     <testsuites>
-        <testsuite name="PhpDesignPatterns-SingletonsPool">
+        <testsuite name="PhpDesignPatterns-Adapter">
             <directory>src/tests</directory>
         </testsuite>
     </testsuites>
