@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 /**
  * @author    : Korotkov Danila <dankorot@gmail.com>
- * @copyright Copyright (c) 2018, Korotkov Danila
- * @license   http://www.gnu.org/licenses/gpl.html GNU GPLv3.0
+ * @license   https://mit-license.org/ MIT
  */
 
-use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
-use Structural\Adapter\AnotherRegistryAdapter;
-use Structural\Adapter\Registry;
+namespace Structural\Adapter\Tests;
 
+use Structural\Adapter\Registry;
+use Structural\Adapter\AnotherRegistryAdapter;
+use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
 /**
  * Class SingletonsPoolTest
