@@ -17,22 +17,22 @@ interface RegistryInterface
 {
 
     /**
-     * @param string $firstValue
+     * @param string $value
      */
-    public function setFirstValue(string $firstValue);
+    public function setFirst(string $value);
 
     /**
-     * @param string $secondValue
+     * @param string $value
      */
-    public function setSecondValue(string $secondValue);
-
-    /**
-     * @return string
-     */
-    public function getFirstValue(): string;
+    public function setSecond(string $value);
 
     /**
      * @return string
      */
-    public function getSecondValue(): string;
+    public function getFirst(): string;
+
+    /**
+     * @return string
+     */
+    public function getSecond(): string;
 }

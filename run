@@ -7,16 +7,16 @@ require_once 'vendor/autoload.php';
 
 $registry = new Registry();
 
-$registry->setFirstValue('FirstValue');
-$registry->setSecondValue('3.14');
+$registry->setFirst('FirstValue');
+$registry->setSecond('3.14');
 
-printf("%s \n", $registry->getFirstValue());
-printf("%s \n", $registry->getSecondValue());
+printf("%s \n", $registry->getFirst());
+printf("%s \n", $registry->getSecond());
 
-$anotherRegistry = new AnotherRegistryAdapter($registry);
+$adapter = new RegistryAdapter(new AnotherRegistry());
 
-$anotherRegistry->setFirstValue('FirstValue');
-$anotherRegistry->setSecondValue('3.14');
+$adapter->setFirst('FirstValue');
+$adapter->setSecond('3.14');
 
-printf("%s \n", $anotherRegistry->getFirstValue());
-printf("%s \n", $anotherRegistry->getSecondValue());
+printf("%s \n", $adapter->getFirst());
+printf("%s \n", $adapter->getSecond());

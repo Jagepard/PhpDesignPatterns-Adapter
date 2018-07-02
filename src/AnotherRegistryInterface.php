@@ -9,16 +9,20 @@ declare(strict_types=1);
 
 namespace Structural\Adapter;
 
+/**
+ * Interface AnotherRegistryInterface
+ * @package Structural\Adapter
+ */
 interface AnotherRegistryInterface
 {
 
     /**
-     * @return int
+     * @param string $item
      */
-    public function getKey(): int;
+    public function setItem(string $item);
 
     /**
-     * @return int
+     * @return array
      */
-    public function getSlug(): int;
+    public function getData(): array;
 }
