@@ -10,61 +10,45 @@ declare(strict_types=1);
 namespace Structural\Adapter\Tests;
 
 use Structural\Adapter\Registry;
-use Structural\Adapter\AnotherRegistryAdapter;
+use Structural\Adapter\RegistryAdapter;
+use Structural\Adapter\AnotherRegistry;
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
 /**
- * Class SingletonsPoolTest
+ * Class AdapterTest
+ * @package Structural\Adapter\Tests
  */
 class AdapterTest extends PHPUnit_Framework_TestCase
 {
 
-    protected $registry;
+    /**
+     * @var RegistryAdapter
+     */
     protected $adapter;
+    /**
+     * @var Registry
+     */
+    protected $registry;
 
     protected function setUp(): void
     {
         $this->registry = new Registry();
-        $this->adapter  = new AnotherRegistryAdapter($this->registry);
+        $this->adapter  = new RegistryAdapter(new AnotherRegistry());
     }
 
-    public function testFirstValue()
+    public function testSecond()
     {
-        $this->getRegistry()->setFirstValue('FirstValue');
-        $this->assertEquals('FirstValue', $this->getRegistry()->getFirstValue());
+        $this->registry->setFirst('First');
+        $this->assertEquals('First', $this->registry->getFirst());
+        $this->registry->setSecond('3.14');
+        $this->assertEquals('3.14', $this->registry->getSecond());
     }
 
-    public function testSecondValue()
+    public function testAdapt()
     {
-        $this->getRegistry()->setSecondValue('3.14');
-        $this->assertEquals('3.14', $this->getRegistry()->getSecondValue());
-    }
-
-    public function testAdaptFirstValue()
-    {
-        $this->getAdapter()->setFirstValue('FirstValue');
-        $this->assertEquals(0, $this->getAdapter()->getFirstValue());
-    }
-
-    public function testAdaptSecondValue()
-    {
-        $this->getAdapter()->setSecondValue('3.14');
-        $this->assertEquals(3, $this->getAdapter()->getSecondValue());
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRegistry()
-    {
-        return $this->registry;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAdapter()
-    {
-        return $this->adapter;
+        $this->adapter->setFirst('First');
+        $this->assertEquals('First', $this->adapter->getFirst());
+        $this->adapter->setSecond('3.14');
+        $this->assertEquals('3.14', $this->adapter->getSecond());
     }
 }
