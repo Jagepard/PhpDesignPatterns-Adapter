@@ -17,39 +17,23 @@ class AnotherRegistry implements AnotherRegistryInterface
 {
 
     /**
-     * @var
+     * @var array
      */
-    protected $key;
-    /**
-     * @var
-     */
-    protected $slug;
+    protected $data;
 
     /**
-     * @codeCoverageIgnore
-     * AnotherRegistry constructor.
-     * @param $key
-     * @param $slug
+     * @param string $item
      */
-    public function __construct(int $key, int $slug)
+    public function setItem(string $item)
     {
-        $this->key  = $key;
-        $this->slug = $slug;
+        $this->data[] = $item;
     }
 
     /**
-     * @return mixed
+     * @return array
      */
-    public function getKey(): int
+    public function getData(): array
     {
-        return $this->key;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSlug(): int
-    {
-        return $this->slug;
+        return $this->data;
     }
 }

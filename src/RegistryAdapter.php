@@ -10,27 +10,32 @@ declare(strict_types=1);
 namespace Structural\Adapter;
 
 /**
- * Class Registry
+ * Class RegistryAdapter
  * @package Structural\Adapter
  */
-class Registry implements RegistryInterface
+class RegistryAdapter implements RegistryInterface
 {
 
     /**
-     * @var string
+     * @var AnotherRegistryInterface
      */
-    protected $first;
+    protected $registry;
+
     /**
-     * @var string
+     * RegistryAdapter constructor.
+     * @param AnotherRegistryInterface $registry
      */
-    protected $second;
+    public function __construct(AnotherRegistryInterface $registry)
+    {
+        $this->registry = $registry;
+    }
 
     /**
      * @param string $value
      */
     public function setFirst(string $value)
     {
-        $this->first = $value;
+        $this->registry->setItem($value);
     }
 
     /**
@@ -38,7 +43,7 @@ class Registry implements RegistryInterface
      */
     public function setSecond(string $value)
     {
-        $this->second = $value;
+        $this->registry->setItem($value);
     }
 
     /**
@@ -46,7 +51,7 @@ class Registry implements RegistryInterface
      */
     public function getFirst(): string
     {
-        return $this->first;
+        return (string) $this->registry->getData()[0];
     }
 
     /**
@@ -54,6 +59,6 @@ class Registry implements RegistryInterface
      */
     public function getSecond(): string
     {
-        return $this->second;
+        return (string) $this->registry->getData()[1];
     }
 }
