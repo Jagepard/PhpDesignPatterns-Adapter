@@ -7,3 +7,5 @@
 
 # Adapter
 Адаптер
+
+![Adapter](https://github.com/Jagepard/PhpDesignPatterns-Adapter/blob/master/UML.png)
