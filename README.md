@@ -7,3 +7,5 @@
 
 # Adapter | [API](https://github.com/Jagepard/PhpDesignPatterns-Adapter/blob/master/docs.md "Documentation API")
 Адаптер
+
+![Adapter](https://github.com/Jagepard/PhpDesignPatterns-Adapter/blob/master/UML.png)
