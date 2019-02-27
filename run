@@ -13,7 +13,7 @@ $registry->setSecond('3.14');
 printf("%s \n", $registry->getFirst());
 printf("%s \n", $registry->getSecond());
 
-$adapter = new RegistryAdapter(new AnotherRegistry());
+$adapter = new Adapter(new AnotherRegistry());
 
 $adapter->setFirst('FirstValue');
 $adapter->setSecond('3.14');

@@ -15,15 +15,14 @@ namespace Structural\Adapter;
  */
 class Registry implements RegistryInterface
 {
-
     /**
      * @var string
      */
-    protected $first;
+    private $first;
     /**
      * @var string
      */
-    protected $second;
+    private $second;
 
     /**
      * @param string $value

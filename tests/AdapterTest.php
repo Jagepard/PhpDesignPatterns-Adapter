@@ -10,8 +10,9 @@ declare(strict_types=1);
 namespace Structural\Adapter\Tests;
 
 use Structural\Adapter\Registry;
-use Structural\Adapter\RegistryAdapter;
+use Structural\Adapter\Adapter;
 use Structural\Adapter\AnotherRegistry;
+use Structural\Adapter\RegistryInterface;
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
 /**
@@ -20,35 +21,50 @@ use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
  */
 class AdapterTest extends PHPUnit_Framework_TestCase
 {
-
     /**
-     * @var RegistryAdapter
+     * @var Adapter
      */
-    protected $adapter;
+    private $adapter;
     /**
-     * @var Registry
+     * @var RegistryInterface
      */
-    protected $registry;
+    private $registry;
 
     protected function setUp(): void
     {
         $this->registry = new Registry();
-        $this->adapter  = new RegistryAdapter(new AnotherRegistry());
+        $this->adapter  = new Adapter(new AnotherRegistry());
     }
 
     public function testSecond()
     {
-        $this->registry->setFirst('First');
-        $this->assertEquals('First', $this->registry->getFirst());
-        $this->registry->setSecond('3.14');
-        $this->assertEquals('3.14', $this->registry->getSecond());
+        $this->getRegistry()->setFirst('First');
+        $this->assertEquals('First', $this->getRegistry()->getFirst());
+        $this->getRegistry()->setSecond('3.14');
+        $this->assertEquals('3.14', $this->getRegistry()->getSecond());
     }
 
     public function testAdapt()
     {
-        $this->adapter->setFirst('First');
-        $this->assertEquals('First', $this->adapter->getFirst());
-        $this->adapter->setSecond('3.14');
-        $this->assertEquals('3.14', $this->adapter->getSecond());
+        $this->getAdapter()->setFirst('First');
+        $this->assertEquals('First', $this->getAdapter()->getFirst());
+        $this->getAdapter()->setSecond('3.14');
+        $this->assertEquals('3.14', $this->getAdapter()->getSecond());
+    }
+
+    /**
+     * @return Adapter
+     */
+    public function getAdapter(): Adapter
+    {
+        return $this->adapter;
+    }
+
+    /**
+     * @return RegistryInterface
+     */
+    public function getRegistry(): RegistryInterface
+    {
+        return $this->registry;
     }
 }
