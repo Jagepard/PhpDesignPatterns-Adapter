@@ -13,7 +13,7 @@ namespace Structural\Adapter;
  * Class RegistryAdapter
  * @package Structural\Adapter
  */
-class RegistryAdapter implements RegistryInterface
+final class Adapter implements RegistryInterface
 {
     /**
      * @var AnotherRegistryInterface
