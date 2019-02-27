@@ -15,7 +15,7 @@
 | Visibility | Function |
 |:-----------|:---------|
 | public | <strong>getData()</strong> : <em>array</em> |
-| public | <strong>setItem(</strong><em>\string</em> <strong>$item</strong>)</strong> : <em>void</em> |
+| public | <strong>setData(</strong><em>\string</em> <strong>$item</strong>)</strong> : <em>void</em> |
 
 <hr />
 
@@ -26,7 +26,7 @@
 | Visibility | Function |
 |:-----------|:---------|
 | public | <strong>getData()</strong> : <em>array</em> |
-| public | <strong>setItem(</strong><em>\string</em> <strong>$item</strong>)</strong> : <em>void</em> |
+| public | <strong>setData(</strong><em>\string</em> <strong>$item</strong>)</strong> : <em>void</em> |
 
 *This class implements [\Structural\Adapter\AnotherRegistryInterface](#interface-structuraladapteranotherregistryinterface)*
 
@@ -55,6 +55,7 @@
 |:-----------|:---------|
 | public | <strong>__construct(</strong><em>[\Structural\Adapter\AnotherRegistryInterface](#interface-structuraladapteranotherregistryinterface)</em> <strong>$registry</strong>)</strong> : <em>void</em><br /><em>RegistryAdapter constructor.</em> |
 | public | <strong>getFirst()</strong> : <em>string</em> |
+| public | <strong>getRegistry()</strong> : <em>[\Structural\Adapter\AnotherRegistryInterface](#interface-structuraladapteranotherregistryinterface)</em> |
 | public | <strong>getSecond()</strong> : <em>string</em> |
 | public | <strong>setFirst(</strong><em>\string</em> <strong>$value</strong>)</strong> : <em>void</em> |
 | public | <strong>setSecond(</strong><em>\string</em> <strong>$value</strong>)</strong> : <em>void</em> |
