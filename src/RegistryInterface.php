@@ -13,7 +13,6 @@ namespace Structural\Adapter;
  */
 interface RegistryInterface
 {
-
     /**
      * @param string $value
      */
