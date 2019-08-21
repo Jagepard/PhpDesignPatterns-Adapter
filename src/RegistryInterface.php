@@ -7,10 +7,6 @@
 
 namespace Structural\Adapter;
 
-/**
- * Interface RegistryInterface
- * @package Structural\Adapter
- */
 interface RegistryInterface
 {
     /**

@@ -15,10 +15,6 @@ use Structural\Adapter\AnotherRegistry;
 use Structural\Adapter\RegistryInterface;
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
-/**
- * Class AdapterTest
- * @package Structural\Adapter\Tests
- */
 class AdapterTest extends PHPUnit_Framework_TestCase
 {
     /**

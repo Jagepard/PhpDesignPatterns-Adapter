@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Structural\Adapter;
 
-/**
- * Class AnotherRegistry
- * @package Structural\Adapter
- */
 class AnotherRegistry implements AnotherRegistryInterface
 {
     /**
