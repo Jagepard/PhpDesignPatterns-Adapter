@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Structural\Adapter;
 
-/**
- * Class RegistryAdapter
- * @package Structural\Adapter
- */
 final class Adapter implements RegistryInterface
 {
     /**

@@ -7,10 +7,6 @@
 
 namespace Structural\Adapter;
 
-/**
- * Interface AnotherRegistryInterface
- * @package Structural\Adapter
- */
 interface AnotherRegistryInterface
 {
     /**
