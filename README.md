@@ -6,6 +6,8 @@
 -----
 
 # Adapter | [API](https://github.com/Jagepard/PhpDesignPatterns-Adapter/blob/master/docs.md "Documentation API")
+```php run``` Запустить исполнение шаблона в терминале
+
 Адаптер
 
 ![Adapter](https://github.com/Jagepard/PhpDesignPatterns-Adapter/blob/master/UML.png)
