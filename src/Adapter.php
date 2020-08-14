@@ -11,57 +11,30 @@ namespace Structural\Adapter;
 
 final class Adapter implements RegistryInterface
 {
-    /**
-     * @var AnotherRegistryInterface
-     */
-    private $registry;
+    private AnotherRegistryInterface $registry;
 
-    /**
-     * RegistryAdapter constructor.
-     * @param AnotherRegistryInterface $registry
-     */
     public function __construct(AnotherRegistryInterface $registry)
     {
         $this->registry = $registry;
     }
 
-    /**
-     * @param string $value
-     */
     public function setFirst(string $value)
     {
-        $this->getRegistry()->setData($value);
+        $this->registry->setData($value);
     }
 
-    /**
-     * @param string $value
-     */
     public function setSecond(string $value)
     {
-        $this->getRegistry()->setData($value);
+        $this->registry->setData($value);
     }
 
-    /**
-     * @return string
-     */
     public function getFirst(): string
     {
-        return (string) $this->getRegistry()->getData()[0];
+        return (string) $this->registry->getData()[0];
     }
 
-    /**
-     * @return string
-     */
     public function getSecond(): string
     {
-        return (string) $this->getRegistry()->getData()[1];
-    }
-
-    /**
-     * @return AnotherRegistryInterface
-     */
-    public function getRegistry(): AnotherRegistryInterface
-    {
-        return $this->registry;
+        return (string) $this->registry->getData()[1];
     }
 }

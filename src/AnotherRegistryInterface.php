@@ -9,13 +9,6 @@ namespace Structural\Adapter;
 
 interface AnotherRegistryInterface
 {
-    /**
-     * @param string $item
-     */
     public function setData(string $item);
-
-    /**
-     * @return array
-     */
     public function getData(): array;
 }
