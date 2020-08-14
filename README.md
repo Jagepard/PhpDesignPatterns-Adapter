@@ -6,8 +6,12 @@
 -----
 
 # Adapter | [API](https://github.com/Jagepard/PhpDesignPatterns-Adapter/blob/master/docs.md "Documentation API")
-```php run``` Запустить исполнение шаблона в терминале
+```php main.php``` execute in terminal
 
-Адаптер
-
-![Adapter](https://github.com/Jagepard/PhpDesignPatterns-Adapter/blob/master/UML.png)
+## Result:
+```
+Original: FirstValue 
+Original: 3.14 
+Adapted: FirstValue 
+Adapted: 3.14 
+```
