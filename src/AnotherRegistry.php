@@ -11,22 +11,13 @@ namespace Structural\Adapter;
 
 class AnotherRegistry implements AnotherRegistryInterface
 {
-    /**
-     * @var array
-     */
-    private $data;
+    private array $data;
 
-    /**
-     * @param string $item
-     */
     public function setData(string $item)
     {
         $this->data[] = $item;
     }
 
-    /**
-     * @return array
-     */
     public function getData(): array
     {
         return $this->data;
