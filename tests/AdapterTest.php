@@ -9,22 +9,13 @@ declare(strict_types=1);
 
 namespace Structural\Adapter\Tests;
 
-use Structural\Adapter\Registry;
-use Structural\Adapter\Adapter;
-use Structural\Adapter\AnotherRegistry;
-use Structural\Adapter\RegistryInterface;
+use Structural\Adapter\{Registry, Adapter, AnotherRegistry, RegistryInterface};
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
 class AdapterTest extends PHPUnit_Framework_TestCase
 {
-    /**
-     * @var Adapter
-     */
-    private $adapter;
-    /**
-     * @var RegistryInterface
-     */
-    private $registry;
+    private Adapter $adapter;
+    private RegistryInterface $registry;
 
     protected function setUp(): void
     {
@@ -34,33 +25,17 @@ class AdapterTest extends PHPUnit_Framework_TestCase
 
     public function testSecond()
     {
-        $this->getRegistry()->setFirst('First');
-        $this->assertEquals('First', $this->getRegistry()->getFirst());
-        $this->getRegistry()->setSecond('3.14');
-        $this->assertEquals('3.14', $this->getRegistry()->getSecond());
+        $this->registry->setFirst('First');
+        $this->assertEquals('First', $this->registry->getFirst());
+        $this->registry->setSecond('3.14');
+        $this->assertEquals('3.14', $this->registry->getSecond());
     }
 
     public function testAdapt()
     {
-        $this->getAdapter()->setFirst('First');
-        $this->assertEquals('First', $this->getAdapter()->getFirst());
-        $this->getAdapter()->setSecond('3.14');
-        $this->assertEquals('3.14', $this->getAdapter()->getSecond());
-    }
-
-    /**
-     * @return Adapter
-     */
-    public function getAdapter(): Adapter
-    {
-        return $this->adapter;
-    }
-
-    /**
-     * @return RegistryInterface
-     */
-    public function getRegistry(): RegistryInterface
-    {
-        return $this->registry;
+        $this->adapter->setFirst('First');
+        $this->assertEquals('First', $this->adapter->getFirst());
+        $this->adapter->setSecond('3.14');
+        $this->assertEquals('3.14', $this->adapter->getSecond());
     }
 }
